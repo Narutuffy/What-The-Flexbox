@@ -9,7 +9,7 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /* Some default styles to make each box visible */
 .box {
   color:white;
-  font-size: 20px;
+  font-size: 100px;
   text-align: center;
   text-shadow:4px 4px 0 rgba(0,0,0,0.1);
   padding:10px;
@@ -33,16 +33,28 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 /*Immediate container/children of flex box makes them also flex box */
 .container{
 	display: flex;
-	/*justify is how the elements are justified along the main axis*/
-	/*justify-content: flex-start;*/
-	/*justify-content: flex-end;*/
-	/*justify-content: center*/
-	justify-content: space-between;
-	/*justify-content:space-around;*/
 	border: 10px solid goldenrod;
-	/*You'll have to mention the height for jstify content to work when firection is from top to bottom and the content should not cross the height*/
-	flex-direction: column;
-	min-height: 100vh;
+	height: 100vh;
+	align-items: flex-start;	
+}
 
+/*align-self:flex-end give attribut to a particular item to do whatever it feels like*/
+/*Therefore align self is to overwrite properties on an individual item*/
+.box{ 
+	width:33.33%;
+}
 
+.box2{
+	padding-bottom: 200px;
+}
+
+.box6{
+	padding-bottom: 0;
+}
+
+.box9{
+	padding-bottom: 50px;
+	align-self: flex-end;
+	/*align-self: center*/
+	/*align-self: baseline*/
 }
